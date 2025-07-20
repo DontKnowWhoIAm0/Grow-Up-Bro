@@ -1,9 +1,11 @@
-package com.example.growupbro
+package com.example.growupbro.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
+import com.example.growupbro.R
+import com.example.growupbro.data.PlantsRepository
 
 
 class PlantsAdapter(

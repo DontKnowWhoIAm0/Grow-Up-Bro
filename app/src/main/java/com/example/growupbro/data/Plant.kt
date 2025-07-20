@@ -1,4 +1,4 @@
-package com.example.growupbro
+package com.example.growupbro.data
 
 import com.example.growupbro.enums.CareDifficulty
 import com.example.growupbro.enums.OtherFeatures

@@ -1,4 +1,4 @@
-package com.example.growupbro
+package com.example.growupbro.data
 
 import com.example.growupbro.enums.CareDifficulty
 import com.example.growupbro.enums.OtherFeatures
@@ -637,7 +637,6 @@ object PlantsRepository {
     fun shuffleList() {
         listForRecyclerView = getFullListOfPlants().shuffled()
     }
-
 
     fun getListForRecyclerView():List<Plant> {
         return listForRecyclerView

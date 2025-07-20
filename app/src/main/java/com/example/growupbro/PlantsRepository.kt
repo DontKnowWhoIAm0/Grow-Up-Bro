@@ -10,6 +10,8 @@ import com.example.growupbro.enums.WaterNeed
 
 object PlantsRepository {
 
+    private var listForRecyclerView: List<Plant> = emptyList()
+
     fun getFullListOfPlants(): List<Plant> {
         return listOf(
             Plant(
@@ -22,9 +24,9 @@ object PlantsRepository {
                 Size.AVERAGE,
                 emptyList(),
                 listOf(
+                    "https://avatars.mds.yandex.net/i?id=b5e76271e63a6ab51a232d5db6eb196e_l-5583010-images-thumbs&n=13",
                     "https://i.pinimg.com/736x/e0/a6/58/e0a6583bea342aeb18425864cc01e97e.jpg",
-                    "https://avatars.mds.yandex.net/i?id=11e09ecfa023fd38157f129ee7d739e4_l-5665308-images-thumbs&n=13",
-                    "https://avatars.mds.yandex.net/i?id=b5e76271e63a6ab51a232d5db6eb196e_l-5583010-images-thumbs&n=13"
+                    "https://avatars.mds.yandex.net/i?id=11e09ecfa023fd38157f129ee7d739e4_l-5665308-images-thumbs&n=13"
                 ),
                 "Сансевиерия — одно из самых выносливых комнатных растений. Действительно может расти в тени и при рассеянном свете, но лучше всего развивается при ярком не прямом освещении. Полив умеренный, только после полного просыхания грунта. Сансевиерия теплолюбива (оптимальная температура от +18 до +25°C), но выдерживает кратковременные понижения до +10°C. Листья плотные, мечевидные, могут быть пёстрыми. Растение очищает воздух, но содержит сапонины, которые могут быть токсичны для домашних животных при поедании. Серьёзные отравления редки, но лучше держать растение вне доступа питомцев и маленьких детей."
             ),
@@ -630,5 +632,14 @@ object PlantsRepository {
                 "Миниатюрное деревце 15-30 см в высоту с мясистыми сердцевидными листьями, покрытыми серебристым пушком. Цветёт мелкими жёлтыми цветами, появляются весной на 2-3 год. Листья опадают при переливе (полив 1 раз в 10-14 дней, зимой 1 раз в месяц, воздух сухой и без опрыскиваний). Рекомендованный грунт: для кактусов + 30% песка."
             )
         )
+    }
+
+    fun shuffleList() {
+        listForRecyclerView = getFullListOfPlants().shuffled()
+    }
+
+
+    fun getListForRecyclerView():List<Plant> {
+        return listForRecyclerView
     }
 }

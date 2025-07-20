@@ -19,4 +19,6 @@ data class Plant(
     val otherFeatures: List<OtherFeatures>,
     val imagesURL: List<String>,
     val description: String,
-)
+) {
+    fun getImageURL(): String = imagesURL[0]
+}

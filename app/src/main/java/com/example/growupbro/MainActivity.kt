@@ -3,7 +3,7 @@ package com.example.growupbro
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.growupbro.data.PlantsRepository
-import com.example.growupbro.testik.TestFragment
+import com.example.growupbro.testik.StartTestFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.test -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, TestFragment())
+                        .replace(R.id.fragment_container, StartTestFragment())
                         .commit()
                     true
                 }

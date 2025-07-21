@@ -11,7 +11,25 @@ class StartTestFragment: Fragment(R.layout.fragment_test_start) {
         super.onViewCreated(view, savedInstanceState)
         var button = view.findViewById<MaterialButton>(R.id.button)
         button.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.fragment_container, TwoAnswersFragment()).addToBackStack(null).commit()
+            TestManager.reset()
+            openQuestionFragment()
+        }
+    }
+
+    fun openQuestionFragment() {
+        val curQuestion = TestManager.getCurrentQuestion()
+        if (curQuestion.getAnswerList().size == 2) {
+            val fragment = TwoAnswersFragment()
+            fragment.setQuestion(curQuestion)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .commit()
+        } else {
+            val fragment = ThreeAnswersFragment()
+            fragment.setQuestion(curQuestion)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .commit()
         }
     }
 }

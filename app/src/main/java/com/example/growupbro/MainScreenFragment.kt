@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.growupbro.adapter.PlantsAdapter
+import com.example.growupbro.testik.TestFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 
@@ -20,7 +21,7 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         recyclerView.adapter = PlantsAdapter(
             Glide.with(this),
             {position ->
-                TODO("Реализовать переход на фргамент с полной информацией о растении")
+                TODO("Реализовать переход на фрагмент с полной информацией о растении")
             })
 
         val researchButton = view.findViewById<MaterialButton>(R.id.search)
@@ -29,8 +30,18 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         }
 
         val menuButton = view.findViewById<BottomNavigationView>(R.id.menu)
-        menuButton.setOnClickListener {
-            TODO("Реализовать переходы между главными разделами")
+        menuButton.setOnItemSelectedListener {item ->
+            when (item.itemId) {
+                R.id.main_screen -> {true}
+                R.id.test -> {
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, TestFragment())
+                        .addToBackStack(null)
+                        .commit()
+                    true
+                }
+                else -> false
+            }
         }
     }
 

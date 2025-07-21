@@ -10,7 +10,7 @@ import com.example.growupbro.R
 import com.example.growupbro.data.Question
 import com.google.android.material.button.MaterialButton
 
-class ThreeAnswersFragment: Fragment(R.layout.fragment_three_answers) {
+class ThreeAnswersFragment : Fragment(R.layout.fragment_three_answers) {
     private lateinit var question: Question
     fun setQuestion(question: Question) {
         this.question = question
@@ -18,24 +18,25 @@ class ThreeAnswersFragment: Fragment(R.layout.fragment_three_answers) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var textQuestion=view.findViewById<TextView>(R.id.question)
-        var textAnswer1=view.findViewById<MaterialButton>(R.id.answer1)
-        var textAnswer2=view.findViewById<MaterialButton>(R.id.answer2)
-        var textAnswer3=view.findViewById<MaterialButton>(R.id.answer3)
+        var questionField = view.findViewById<TextView>(R.id.question)
+        var answer1 = view.findViewById<MaterialButton>(R.id.answer1)
+        var answer2 = view.findViewById<MaterialButton>(R.id.answer2)
+        var answer3 = view.findViewById<MaterialButton>(R.id.answer3)
         var image = view.findViewById<ImageView>(R.id.image)
 
-        textQuestion.text= question.getQuestion()
-        textAnswer1.text = question.getAnswers()[0]
-        textAnswer2.text = question.getAnswers()[1]
-        textAnswer3.text = question.getAnswers()[2]
-        Glide.with(this).load(question.getImage()).into(image)
-        textAnswer1.setOnClickListener{
+        questionField.text = question.getQuestionText()
+        answer1.text = question.getAnswerList()[0]
+        answer2.text = question.getAnswerList()[1]
+        answer3.text = question.getAnswerList()[2]
+        Glide.with(this).load(question.getImageURL()).into(image)
+
+        answer1.setOnClickListener {
             TODO("реализовать обработку нажатия")
         }
-        textAnswer2.setOnClickListener{
+        answer2.setOnClickListener {
             TODO("реализовать обработку нажатия")
         }
-        textAnswer3.setOnClickListener{
+        answer3.setOnClickListener {
             TODO("реализовать обработку нажатия")
         }
     }

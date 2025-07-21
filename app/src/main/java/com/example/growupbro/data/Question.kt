@@ -5,13 +5,13 @@ data class Question(
     val answers: List<String>,
     val image: String
 ){
-    fun getQuestion(): String {
+    fun getQuestionText(): String {
         return question
     }
-    fun getAnswers(): List<String> {
+    fun getAnswerList(): List<String> {
         return answers
     }
-    fun getImage(): String {
+    fun getImageURL(): String {
         return image
     }
 }

@@ -4,17 +4,19 @@ import com.example.growupbro.data.Question
 import com.example.growupbro.data.QuestionsRepository
 
 object TestManager {
-    private var index = 0
-    private var answers = ""
+     var index = 0
+     var answers = ""
     fun getCurrentQuestion(): Question {
-       return QuestionsRepository.getQuestionsList()[index]
-        index++
+       val curQuestion = QuestionsRepository.getQuestionsList()[index]
+        index += 1
+        return curQuestion
+
     }
     fun addAnswer(curAnswer: String) {
         answers = answers + curAnswer
     }
     fun isLastQuestion(): Boolean {
-        if (index == QuestionsRepository.getQuestionsList().size-1) {
+        if (index == QuestionsRepository.getQuestionsList().size) {
             return true
         }
         else {

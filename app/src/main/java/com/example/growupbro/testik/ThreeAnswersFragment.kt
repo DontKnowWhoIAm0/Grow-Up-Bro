@@ -31,14 +31,34 @@ class ThreeAnswersFragment : Fragment(R.layout.fragment_three_answers) {
         Glide.with(this).load(question.getImageURL()).into(image)
 
         answer1.setOnClickListener {
-            TODO("реализовать обработку нажатия")
+            clickProcessing("a")
         }
         answer2.setOnClickListener {
-            TODO("реализовать обработку нажатия")
+            clickProcessing("b")
         }
         answer3.setOnClickListener {
-            TODO("реализовать обработку нажатия")
+            clickProcessing("c")
         }
     }
 
+    fun clickProcessing(answer: String) {
+        TestManager.addAnswer(answer)
+        val curQuestion = TestManager.getCurrentQuestion()
+        if (curQuestion.getAnswerList().size == 2) {
+            val fragment = TwoAnswersFragment()
+            fragment.setQuestion(curQuestion)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .commit()
+        } else {
+            val fragment = ThreeAnswersFragment()
+            fragment.setQuestion(curQuestion)
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .commit()
+        }
+
+    }
+
 }
+

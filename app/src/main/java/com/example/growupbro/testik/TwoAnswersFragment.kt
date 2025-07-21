@@ -1,6 +1,7 @@
 package com.example.growupbro.testik
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -31,11 +32,35 @@ class TwoAnswersFragment: Fragment(R.layout.fragment_two_answers) {
         Glide.with(this).load(question.getImageURL()).into(image)
 
         answer1.setOnClickListener{
-            TODO("реализовать обработку нажатия")
+            clickProcessing("a")
         }
         answer2.setOnClickListener{
-            TODO("реализовать обработку нажатия")
+            clickProcessing("b")
         }
+    }
+    fun clickProcessing(answer: String) {
+        TestManager.addAnswer(answer)
+        if (TestManager.isLastQuestion()) {
+            TODO("открыть экран с результатом")
+        }
+        else {
+            val curQuestion = TestManager.getCurrentQuestion()
+            if (curQuestion.getAnswerList().size == 2) {
+                val fragment = TwoAnswersFragment()
+                fragment.setQuestion(curQuestion)
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                    .commit()
+            } else {
+                val fragment = ThreeAnswersFragment()
+                fragment.setQuestion(curQuestion)
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                    .commit()
+            }
+
+        }
+
     }
 
 }

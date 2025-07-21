@@ -41,7 +41,9 @@ class TwoAnswersFragment: Fragment(R.layout.fragment_two_answers) {
     fun clickProcessing(answer: String) {
         TestManager.addAnswer(answer)
         if (TestManager.isLastQuestion()) {
-            TODO("открыть экран с результатом")
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, TestResultFragment())
+                .commit()
         }
         else {
             val curQuestion = TestManager.getCurrentQuestion()
@@ -49,18 +51,15 @@ class TwoAnswersFragment: Fragment(R.layout.fragment_two_answers) {
                 val fragment = TwoAnswersFragment()
                 fragment.setQuestion(curQuestion)
                 requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                    .replace(R.id.fragment_container, fragment)
                     .commit()
             } else {
                 val fragment = ThreeAnswersFragment()
                 fragment.setQuestion(curQuestion)
                 requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                    .replace(R.id.fragment_container, fragment)
                     .commit()
             }
-
         }
-
     }
-
 }

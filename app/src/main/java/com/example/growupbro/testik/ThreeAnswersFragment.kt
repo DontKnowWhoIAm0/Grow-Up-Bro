@@ -48,13 +48,13 @@ class ThreeAnswersFragment : Fragment(R.layout.fragment_three_answers) {
             val fragment = TwoAnswersFragment()
             fragment.setQuestion(curQuestion)
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .replace(R.id.fragment_container, fragment)
                 .commit()
         } else {
             val fragment = ThreeAnswersFragment()
             fragment.setQuestion(curQuestion)
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .replace(R.id.fragment_container, fragment)
                 .commit()
         }
 

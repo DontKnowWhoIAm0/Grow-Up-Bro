@@ -22,13 +22,13 @@ class StartTestFragment: Fragment(R.layout.fragment_test_start) {
             val fragment = TwoAnswersFragment()
             fragment.setQuestion(curQuestion)
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .replace(R.id.fragment_container, fragment)
                 .commit()
         } else {
             val fragment = ThreeAnswersFragment()
             fragment.setQuestion(curQuestion)
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, fragment).addToBackStack(null)
+                .replace(R.id.fragment_container, fragment)
                 .commit()
         }
     }

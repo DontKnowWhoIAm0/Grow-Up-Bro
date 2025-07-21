@@ -29,20 +29,6 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
             TODO("Реализовать переход на фрагмент с выбором фильтров")
         }
 
-        val menuButton = view.findViewById<BottomNavigationView>(R.id.menu)
-        menuButton.setOnItemSelectedListener {item ->
-            when (item.itemId) {
-                R.id.main_screen -> {true}
-                R.id.test -> {
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, TestFragment())
-                        .addToBackStack(null)
-                        .commit()
-                    true
-                }
-                else -> false
-            }
-        }
     }
 
 

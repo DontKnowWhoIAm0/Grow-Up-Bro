@@ -11,11 +11,11 @@
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
         android:text="Тебе подходит:"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="#000"
-        android:textSize="30dp">
+        android:textSize="27sp">
     </TextView>
 
     <ImageView
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="#000"
-        android:textSize="27dp">
+        android:textSize="25sp">
     </TextView>
 
     <TextView
@@ -51,12 +51,12 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         android:gravity="center"
         android:text="тут описание растения и блаблаблабла......."
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="#000"
-        android:textSize="17dp"
-        android:layout_marginHorizontal="15dp">
+        android:textSize="16sp"
+        android:layout_marginHorizontal="13dp">
     </TextView>
 
     <com.google.android.material.button.MaterialButton
@@ -68,8 +68,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Скачать"
         android:textColor="#FFFFFF"
-        android:layout_marginBottom="85dp"
-        android:textSize="17dp"
+        android:layout_marginBottom="83dp"
+        android:textSize="17sp"
         android:backgroundTint="#24873b"
         app:cornerRadius="17dp">
     </com.google.android.material.button.MaterialButton>

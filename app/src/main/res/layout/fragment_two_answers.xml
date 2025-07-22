@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter">
     </ImageView>
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="#000"
-        android:textSize="25dp">
+        android:textSize="25sp">
     </TextView>
 
     <com.google.android.material.button.MaterialButton
@@ -40,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="ответ намбер 1"
         android:textColor="#000"
+        android:textSize="14sp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#8bbf93"
         app:cornerRadius="10dp">
@@ -55,6 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="ответ намбер 2"
         android:textColor="#000"
+        android:textSize="14sp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#8bbf93"
         app:cornerRadius="10dp">

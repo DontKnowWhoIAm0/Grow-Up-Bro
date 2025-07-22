@@ -6,62 +6,62 @@ object QuestionsRepository {
             Question(
                 "У тебя есть дети или животные?",
                 listOf("Да", "Нет"),
-                "https://i.pinimg.com/1200x/d2/37/22/d2372228a50e57c0954040d402db5c9a.jpg"
+                "https://i.pinimg.com/736x/d8/a3/b4/d8a3b49b8d605f3ec5451cca37390a4e.jpg"
             ),
                     Question(
                     "Насколько ты занят(а)?",
             listOf("Постоянно дома, много свободного времени", "Часто дома, но не всегда свободен/свободна", "Почти не бываю дома, весь в делах"),
-                        "https://i.pinimg.com/736x/51/a2/b0/51a2b0bd89767d20a1c3090328e57a78.jpg"
+                        "https://i.pinimg.com/1200x/db/9c/df/db9cdf1ea8bb504e800c073cf083f677.jpg"
         ),
             Question(
                 "Готов(а) ли ты часто ухаживать за растением?",
                 listOf("Да, поливать, опрыскивать, пересаживать — не проблема", "Хочу минимум забот", "Что-то среднее"),
-                "https://i.pinimg.com/1200x/04/d0/ca/04d0cab7685bc28d1d74de6fb7a203e1.jpg"
+                "https://i.pinimg.com/1200x/df/69/34/df69347124a704ef47c09c313bdeae92.jpg"
             ),
             Question(
                 "Сколько света у тебя дома?",
                 listOf("Много прямого солнечного света", "Рассеянный свет/полутень", "Почти нет света, тень"),
-                "https://i.pinimg.com/736x/56/2e/da/562edac6473b1fd0400a72482e470634.jpg"
+                "https://i.pinimg.com/1200x/06/31/72/063172290eb648bbe183423e71255b6c.jpg"
             ),
             Question(
                 "Насколько важен тебе внешний вид растения?",
                 listOf("Очень важен — хочу вау-эффект!", "Хочу зелень, не обязательно эффектную", "Главное — живучесть"),
-                "https://i.pinimg.com/1200x/97/78/80/977880402ced0392a40cea548e0fc9b1.jpg"
+                "https://i.pinimg.com/1200x/7b/70/7c/7b707c89444b9db4e0c33caebd7e8127.jpg"
             ),
             Question(
                 "Ты хочешь цветущее растение?",
                 listOf("Да", "Нет"),
-                "https://i.pinimg.com/736x/f4/44/52/f4445265e3401d239b73b9e4ba080ce6.jpg"
+                "https://i.pinimg.com/736x/6c/a8/2c/6ca82cfcab4c284a99ca02673cca2584.jpg"
             ),
             Question(
                 "Как относишься к запаху растений?",
                 listOf("Люблю ароматные растения", "Предпочитаю без запаха", "У меня аллергия — лучше нейтральные"),
-                "https://i.pinimg.com/1200x/56/65/5e/56655e05f6614bf1a9194ffcd8867853.jpg"
+                "https://i.pinimg.com/736x/b0/20/fd/b020fddc15eb89f66435ab8c6f1aceb4.jpg"
             ),
             Question(
                 "Какой размер растения тебе подходит?",
                 listOf("Небольшое — на подоконник", "Среднее — на тумбочку или пол", "Крупное — хочу зелёный акцент в комнате"),
-                "https://i.pinimg.com/736x/33/44/07/3344071c907afbc1cfc2c49e223a89cb.jpg"
+                "https://i.pinimg.com/736x/ad/21/6c/ad216c65054ee3cbda1e6f622d57d051.jpg"
             ),
             Question(
                 "Какой у тебя уровень в растениеводстве?",
                 listOf("Новичок", "Опытный", "Уверенный, но ленивый"),
-                "https://i.pinimg.com/736x/dd/c0/b7/ddc0b76fc73c17f5eb78e11ca6038c2a.jpg"
+                "https://i.pinimg.com/1200x/bc/ef/5f/bcef5f1442623e88e23903edd947c9d0.jpg"
             ),
             Question(
                 "Какое настроение тебе ближе всего?",
                 listOf("Яркое, экспрессивное", "Спокойное, уравновешенное", "Лёгкое, минималистичное"),
-                "https://i.pinimg.com/736x/68/51/ea/6851eaae8375acbb9f22ecbb8bffea91.jpg"
+                "https://i.pinimg.com/736x/ad/ea/63/adea635a0e2137b4f5bcec7b98a46c52.jpg"
             ),
             Question(
                 "Хочешь ли ты полезное растение (очищает воздух, съедобное, лекарственное)?",
                 listOf("Да, это важно", "Не принципиально"),
-                "https://i.pinimg.com/736x/64/e0/74/64e0745745fe0e580c5687b3f5ef80b7.jpg"
+                "https://i.pinimg.com/736x/3e/b1/e9/3eb1e9c3ed462f55759576d3ce5e83ff.jpg"
             ),
             Question(
                 "Какой температурный режим в твоем доме?",
                 listOf("Тепло круглый год (+20…+30°C)", "Прохладно зимой (+10…+18°C)"),
-                "https://i.pinimg.com/736x/4b/a1/9a/4ba19aac7ed0148c2149ac6d1a74a018.jpg"
+                "https://i.pinimg.com/originals/1b/ec/b0/1becb0041ca8c7f0dcfb49bbc9501b2c.jpg"
             ),
         )
     }

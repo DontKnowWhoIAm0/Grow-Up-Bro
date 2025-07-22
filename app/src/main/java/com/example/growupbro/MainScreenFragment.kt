@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.growupbro.adapter.PlantsAdapter
 import com.example.growupbro.data.PlantsRepository
+import com.example.growupbro.filters.FiltersFragment
 import com.example.growupbro.testik.StartTestFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
@@ -31,7 +32,11 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
 
         val researchButton = view.findViewById<MaterialButton>(R.id.search)
         researchButton.setOnClickListener {
-            TODO("Реализовать переход на фрагмент с выбором фильтров")
+            val bnm = requireActivity().findViewById<BottomNavigationView>(R.id.menu)
+            bnm.visibility = View.GONE
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, FiltersFragment())
+                .commit()
         }
 
     }

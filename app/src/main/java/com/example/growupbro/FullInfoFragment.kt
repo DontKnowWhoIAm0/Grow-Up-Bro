@@ -1,7 +1,6 @@
 package com.example.growupbro
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -27,7 +26,6 @@ class FullInfoFragment(val plant: Plant) : Fragment(R.layout.fragment_full_info)
 
         image.setOnClickListener {
             plant.changeImage()
-            Log.d("FullInfo", plant.getCurrentImageURL().toString())
             Glide.with(this).load(plant.getCurrentImageURL()).transform(RoundedCorners(10)).into(image)
         }
 

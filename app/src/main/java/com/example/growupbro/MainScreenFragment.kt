@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.growupbro.adapter.PlantsAdapter
+import com.example.growupbro.data.PlantsRepository
+import com.example.growupbro.testik.StartTestFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 
@@ -19,8 +21,12 @@ class MainScreenFragment : Fragment(R.layout.fragment_main_screen) {
         recyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.adapter = PlantsAdapter(
             Glide.with(this),
-            {position ->
-                TODO("Реализовать переход на фрагмент с полной информацией о растении")
+            { position ->
+                val plant = PlantsRepository.getListForRecyclerView()[position]
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container, FullInfoFragment(plant)).addToBackStack(null)
+                    .commit()
+                TODO("Пофиксить размеры картинок в FullInfo (хуевит не квадратные, найти способ обрезать)")
             })
 
         val researchButton = view.findViewById<MaterialButton>(R.id.search)

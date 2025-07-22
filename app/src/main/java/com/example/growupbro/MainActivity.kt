@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.main_screen -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, MainScreenFragment())
+                        .replace(R.id.fragment_container, MainScreenFragment()).addToBackStack(null)
                         .commit()
                     true
                 }
                 R.id.test -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, StartTestFragment())
+                        .replace(R.id.fragment_container, StartTestFragment()).addToBackStack(null)
                         .commit()
                     true
                 }

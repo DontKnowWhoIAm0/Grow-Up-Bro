@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white">
+    android:background="#FFFCF7">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="280dp"
         android:layout_height="280dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="120dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter">
-    </ImageView>
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/question"
         android:layout_width="290dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="вопросик"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:textColor="#000"
-        android:textSize="25sp">
-    </TextView>
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"></TextView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/answer1"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#8bbf93"
         android:text="ответ намбер 1"
         android:textColor="#000"
         android:textSize="14sp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#8bbf93"
-        app:cornerRadius="10dp">
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question">
 
     </com.google.android.material.button.MaterialButton>
 
@@ -51,16 +49,15 @@
         android:id="@+id/answer2"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/answer1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#8bbf93"
         android:text="ответ намбер 2"
         android:textColor="#000"
         android:textSize="14sp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#8bbf93"
-        app:cornerRadius="10dp">
-    </com.google.android.material.button.MaterialButton>
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer1"></com.google.android.material.button.MaterialButton>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

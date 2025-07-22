@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCF7">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mediumLevel2"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/white"
+        android:text="без профессионала не лезть"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Фильтры"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/careDif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Сложность в уходе"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/careDif2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Освещение"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumLevel2" />
+
+    <TextView
+        android:id="@+id/careDif3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Полив"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel2" />
+
+    <TextView
+        android:id="@+id/careDif5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Размер"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel9" />
+
+    <TextView
+        android:id="@+id/careDif6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Безопасность для детей и животных"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel11" />
+
+    <TextView
+        android:id="@+id/careDif7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Другие категории"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel14" />
+
+    <TextView
+        android:id="@+id/careDif4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Температура"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Разберется даже новичок"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/careDif"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel2"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Светолюбивое"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif2"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel5"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Минимальный"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif3"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel11"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Маленький"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif5"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel14"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Безопасное"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif6"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel16"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Цветущее"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif7"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel17"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Пахнущее"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel16"
+        app:layout_constraintTop_toBottomOf="@+id/careDif7"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel19"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Съедобное"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel16"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel21"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Лекарственное"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel19"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel16"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel22"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:ellipsize="end"
+        android:text="Очищает воздух"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel21"
+        app:layout_constraintTop_toBottomOf="@+id/beginnerLevel16"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel18"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Аллерген"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel17"
+        app:layout_constraintTop_toBottomOf="@+id/careDif7"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel15"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Ядовитое"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel14"
+        app:layout_constraintTop_toBottomOf="@+id/careDif6"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel12"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Средний"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel11"
+        app:layout_constraintTop_toBottomOf="@+id/careDif5"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel13"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Большой"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel12"
+        app:layout_constraintTop_toBottomOf="@+id/careDif5"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel9"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Холодостойкое"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/careDif4"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel10"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Теплолюбивое"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel9"
+        app:layout_constraintTop_toBottomOf="@+id/careDif4"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel7"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Умеренный"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel5"
+        app:layout_constraintTop_toBottomOf="@+id/careDif3"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel8"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Обильный"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel7"
+        app:layout_constraintTop_toBottomOf="@+id/careDif3"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel4"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Тенелюбивое"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel3"
+        app:layout_constraintTop_toBottomOf="@+id/careDif2"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/beginnerLevel3"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Рассеянный свет"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@+id/beginnerLevel2"
+        app:layout_constraintTop_toBottomOf="@+id/careDif2"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mediumLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/white"
+        android:text="Для бывалого"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toEndOf="@id/beginnerLevel"
+        app:layout_constraintTop_toBottomOf="@id/careDif"
+        app:strokeColor="#24873B"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/applyButton"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#24873B"
+        android:text="Применить"
+        app:cornerRadius="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

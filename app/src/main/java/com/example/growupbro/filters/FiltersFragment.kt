@@ -1,8 +1,6 @@
 package com.example.growupbro.filters
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.growupbro.R
@@ -59,6 +57,8 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
         val otherFeaturesMedical = view.findViewById<MaterialButton>(R.id.medical)
         val otherFeaturesEdible = view.findViewById<MaterialButton>(R.id.edible)
         val otherFeaturesAircleaning = view.findViewById<MaterialButton>(R.id.aircleaning)
+
+        val applyButton = view.findViewById<MaterialButton>(R.id.applyButton)
 
         careDifficultyBeginnerButton.setOnClickListener {
             val selectedCareDifficulties = selectedFilters["careDifficult"] as MutableList<CareDifficulty>
@@ -208,9 +208,11 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
             if (selectedSize.contains(Size.SMALL)) {
                 sizeSmall.setBackgroundColor("#FFFFFFFF".toColorInt())
                 selectedSize.remove(Size.SMALL)
+                selectedFilters["size"] = selectedSize
             } else {
                 sizeSmall.setBackgroundColor("#24873B".toColorInt())
                 selectedSize.add(Size.SMALL)
+                selectedFilters["size"] = selectedSize
             }
         }
 
@@ -219,9 +221,11 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
             if (selectedSize.contains(Size.AVERAGE)) {
                 sizeAverage.setBackgroundColor("#FFFFFFFF".toColorInt())
                 selectedSize.remove(Size.AVERAGE)
+                selectedFilters["size"] = selectedSize
             } else {
                 sizeAverage.setBackgroundColor("#24873B".toColorInt())
                 selectedSize.add(Size.AVERAGE)
+                selectedFilters["size"] = selectedSize
             }
         }
 
@@ -230,12 +234,13 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
             if (selectedSize.contains(Size.BIG)) {
                 sizeBig.setBackgroundColor("#FFFFFFFF".toColorInt())
                 selectedSize.remove(Size.BIG)
+                selectedFilters["size"] = selectedSize
             } else {
                 sizeBig.setBackgroundColor("#24873B".toColorInt())
                 selectedSize.add(Size.BIG)
+                selectedFilters["size"] = selectedSize
             }
         }
-
 
         safetySafe.setOnClickListener {
             val selectedSafety = selectedFilters["safety"] as MutableList<Safety>
@@ -333,15 +338,9 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
             selectedFilters["otherFeatures"] = selectedOtherFeatures
         }
 
-
-
-
-
-
-
-
-
-
+        applyButton.setOnClickListener {
+            TODO("Реализовать отбор растений по фильтрам и вывод на экран (+ кнопка назад)")
+        }
 
     }
 }

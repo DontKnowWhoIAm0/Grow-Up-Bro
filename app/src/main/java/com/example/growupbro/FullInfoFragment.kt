@@ -8,9 +8,10 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.growupbro.data.Plant
+import com.example.growupbro.utils.FileDownloader
 import com.google.android.material.button.MaterialButton
 
-class FullInfoFragment(val plant: Plant) : Fragment(R.layout.fragment_full_info) {
+class FullInfoFragment(private val plant: Plant) : Fragment(R.layout.fragment_full_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,8 +36,9 @@ class FullInfoFragment(val plant: Plant) : Fragment(R.layout.fragment_full_info)
         }
 
         downloadButton.setOnClickListener {
-            TODO("Реализовать скачивание картинки")
+            requireContext().let {
+                FileDownloader.createAndSaveFile(it, plant)
+            }
         }
-
     }
 }

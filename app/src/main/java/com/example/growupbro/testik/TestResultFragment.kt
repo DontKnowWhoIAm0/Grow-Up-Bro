@@ -8,9 +8,10 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.growupbro.R
+import com.example.growupbro.utils.FileDownloader
 import com.google.android.material.button.MaterialButton
 
-class TestResultFragment: Fragment(R.layout.fragment_test_result) {
+class TestResultFragment : Fragment(R.layout.fragment_test_result) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val plant = ResultSelector.findResult()
@@ -23,7 +24,11 @@ class TestResultFragment: Fragment(R.layout.fragment_test_result) {
         title.text = plant?.name
         desc.text = plant?.description
         button.setOnClickListener {
-            TODO("реализовать скачивание")
+            requireContext().let {
+                if (plant != null) {
+                    FileDownloader.createAndSaveFile(it, plant)
+                }
+            }
         }
     }
-    }
+}

@@ -9,12 +9,13 @@
         android:id="@+id/image"
         android:layout_width="280dp"
         android:layout_height="280dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="95dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
     <TextView
         android:id="@+id/question"
@@ -27,7 +28,8 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/image">
+    </TextView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/answer1"
@@ -42,7 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question">
-
     </com.google.android.material.button.MaterialButton>
 
     <com.google.android.material.button.MaterialButton
@@ -57,7 +58,8 @@
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answer1"></com.google.android.material.button.MaterialButton>
+        app:layout_constraintTop_toBottomOf="@+id/answer1">
+    </com.google.android.material.button.MaterialButton>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

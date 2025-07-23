@@ -18,7 +18,8 @@ class FullInfoFragment(val plant: Plant) : Fragment(R.layout.fragment_full_info)
         val image = view.findViewById<ImageView>(R.id.image)
         val title = view.findViewById<TextView>(R.id.title)
         val description = view.findViewById<TextView>(R.id.description)
-        val button = view.findViewById<MaterialButton>(R.id.button)
+        val downloadButton = view.findViewById<MaterialButton>(R.id.download)
+        val backButton = view.findViewById<MaterialButton>(R.id.back)
 
         Glide.with(this).load(plant.getCurrentImageURL()).transform(RoundedCorners(10)).into(image)
         title.text = plant.name
@@ -29,7 +30,11 @@ class FullInfoFragment(val plant: Plant) : Fragment(R.layout.fragment_full_info)
             Glide.with(this).load(plant.getCurrentImageURL()).transform(RoundedCorners(10)).into(image)
         }
 
-        button.setOnClickListener {
+        backButton.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
+        }
+
+        downloadButton.setOnClickListener {
             TODO("Реализовать скачивание картинки")
         }
 

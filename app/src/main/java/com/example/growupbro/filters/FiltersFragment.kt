@@ -59,6 +59,7 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
         val otherFeaturesEdible = view.findViewById<MaterialButton>(R.id.edible)
         val otherFeaturesAircleaning = view.findViewById<MaterialButton>(R.id.aircleaning)
 
+        val backButton = view.findViewById<MaterialButton>(R.id.back)
         val applyButton = view.findViewById<MaterialButton>(R.id.applyButton)
 
         careDifficultyBeginnerButton.setOnClickListener {
@@ -337,6 +338,10 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
                 selectedOtherFeatures.add(OtherFeatures.AIRCLEANING)
             }
             selectedFilters["otherFeatures"] = selectedOtherFeatures
+        }
+
+        backButton.setOnClickListener {
+            requireActivity().supportFragmentManager.popBackStack()
         }
 
         applyButton.setOnClickListener {

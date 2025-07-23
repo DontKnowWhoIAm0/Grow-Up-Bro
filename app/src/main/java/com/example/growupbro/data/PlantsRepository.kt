@@ -641,4 +641,30 @@ object PlantsRepository {
     fun getListForRecyclerView():List<Plant> {
         return listForRecyclerView
     }
+
+    fun filterPlantListByChosenFilters(filters: MutableMap<String, List<Any>>) {
+        val resultList: MutableList<Plant> = mutableListOf()
+
+        val careFilter = filters["careDifficult"].orEmpty()
+        val sunFilter = filters["sunlightNeed"].orEmpty()
+        val waterFilter = filters["waterNeed"].orEmpty()
+        val tempFilter = filters["temperatureNeed"].orEmpty()
+        val sizeFilter = filters["size"].orEmpty()
+        val safeFilter = filters["safety"].orEmpty()
+        val otherFilter = filters["otherFeatures"].orEmpty()
+
+        for (plant in getFullListOfPlants()) {
+            if ((careFilter.isEmpty() || plant.careDifficulty in careFilter) &&
+                (sunFilter.isEmpty() || plant.sunlightNeed in sunFilter) &&
+                (waterFilter.isEmpty() || plant.waterNeed in waterFilter) &&
+                (tempFilter.isEmpty() || plant.temperatureNeed in tempFilter) &&
+                (sizeFilter.isEmpty() || plant.size in sizeFilter) &&
+                (safeFilter.isEmpty() || plant.isSafe in safeFilter) &&
+                (otherFilter.isEmpty() || plant.otherFeatures.intersect(otherFilter).isNotEmpty())) {
+                resultList.add(plant)
+            }
+        }
+        listForRecyclerView = resultList
+    }
+
 }

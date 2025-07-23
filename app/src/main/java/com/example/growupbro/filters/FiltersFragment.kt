@@ -13,6 +13,7 @@ import com.example.growupbro.enums.TemperatureNeed
 import com.example.growupbro.enums.WaterNeed
 import com.google.android.material.button.MaterialButton
 import androidx.core.graphics.toColorInt
+import com.example.growupbro.data.PlantsRepository
 
 class FiltersFragment : Fragment(R.layout.fragment_filters) {
 
@@ -339,7 +340,8 @@ class FiltersFragment : Fragment(R.layout.fragment_filters) {
         }
 
         applyButton.setOnClickListener {
-            TODO("Реализовать отбор растений по фильтрам и вывод на экран (+ кнопка назад)")
+            PlantsRepository.filterPlantListByChosenFilters(selectedFilters)
+            requireActivity().supportFragmentManager.popBackStack()
         }
 
     }
